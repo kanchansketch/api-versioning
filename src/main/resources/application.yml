@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: demo
+
+apiversioning:
+  strategy: path
+  base-path: /api
+  header-name: X-API-Version
+  query-param: version
+
+springdoc:
+  group-configs:
+    - group: v1
+      paths-to-match: /api/v1/**
+    - group: v2
+      paths-to-match: /api/v2/**
+    - group: v3
+      paths-to-match: /api/v3/**
+    - group: v4
+      paths-to-match: /api/v4/**
